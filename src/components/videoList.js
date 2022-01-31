@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoListItem from './VideoListItem';
+import VideoListItem from './videoListItem';
 import {Container, Row, ListGroup } from 'react-bootstrap/';
 
 const VideoList = (props) => {

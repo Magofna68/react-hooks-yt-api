@@ -1,9 +1,9 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 // import * as YTSearchAction from './actions/yt_search_action'
-import VideoList from './components/VideoList';
+import VideoList from './components/videoList';
 import YTSearch from 'youtube-api-search';
-import VideoDetail from './components/VideoDetail';
+import VideoDetail from './components/videoDetail';
 import {Container, Row, Col } from 'react-bootstrap/';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -21,9 +21,8 @@ const App = () => {
     });
   }
 
-  }
-
-    return (
+  
+  return (
       <Container fluid>
         {/* <div> */}
             <h2>Youtube Hooks API Project</h2>
@@ -37,11 +36,12 @@ const App = () => {
                 <VideoList 
                   // onVideoSelect={userSelected => this.setState({ selectedVideo: userSelected })}
                   videos={videos} 
-                />
+                  />
               </Col>
             </Row>
         {/* </div> */}
       </Container>
     )
-
+    
+  }
 export default App;
