@@ -14,7 +14,7 @@ const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
-    fetchResource('nothing, nowhere.');
+    fetchResource("nothing, nowhere.");
   }, []);
  
   const fetchResource = async (item) => {
@@ -27,14 +27,11 @@ const App = () => {
   
   return (
       <Container fluid>
-        {/* <div> */}
             <h2>Youtube Hooks API Project</h2>
             <h5>Brandon Magofna</h5>
             <SearchBar onSearchTermChange={term => fetchResource(term)} />
             <Row className="justify-content-md-center">
-              {/* <Col xs={8} md={8}> */}
                 <VideoDetail video={selectedVideo} />
-              {/* </Col> */}
               <Col xs={4} md={4}>
                 <VideoList 
                   onVideoSelect={selected => setSelectedVideo(selected)}
@@ -42,7 +39,6 @@ const App = () => {
                 />
               </Col>
             </Row>
-        {/* </div> */}
       </Container>
     )
     

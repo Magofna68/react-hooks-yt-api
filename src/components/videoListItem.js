@@ -6,6 +6,7 @@ const VideoListItem = (props) => {
   console.log(video);
   const imageUrl = video.snippet.thumbnails.default.url;
   return (
+    // onClick gets passed to VideoList component as callback function
     <li onClick={() => onUserSelected(video)} className='list-group-item'>
       <div className='video-list media'>
         <div className='media-left'>
