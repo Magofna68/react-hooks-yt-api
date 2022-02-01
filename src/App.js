@@ -5,19 +5,22 @@ import VideoList from './components/videoList';
 import YTSearch from 'youtube-api-search';
 import VideoDetail from './components/videoDetail';
 import {Container, Row, Col } from 'react-bootstrap/';
+import SearchBar from './components/searchBar';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 const App = () => {
   const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
 
   useEffect(() => {
     fetchResource('nothing, nowhere.');
   }, []);
  
   const fetchResource = async (item) => {
-    YTSearch({key: API_KEY, term: item}, (data) => {
-      setVideos(data)
+    await YTSearch({key: API_KEY, term: item}, (data) => {
+      setVideos(data);
+      setSelectedVideo(data[0])
     });
   }
 
@@ -27,16 +30,16 @@ const App = () => {
         {/* <div> */}
             <h2>Youtube Hooks API Project</h2>
             <h5>Brandon Magofna</h5>
-            {/* <SearchBar onSearchTermChange={term => this.videoSearch(term)} /> */}
+            <SearchBar onSearchTermChange={term => fetchResource(term)} />
             <Row className="justify-content-md-center">
-              {/* <Col xs={8} md={8}>
-                <VideoDetail video={this.state.selectedVideo} />
-              </Col> */}
+              {/* <Col xs={8} md={8}> */}
+                <VideoDetail video={selectedVideo} />
+              {/* </Col> */}
               <Col xs={4} md={4}>
                 <VideoList 
-                  // onVideoSelect={userSelected => this.setState({ selectedVideo: userSelected })}
+                  onVideoSelect={selected => setSelectedVideo(selected)}
                   videos={videos} 
-                  />
+                />
               </Col>
             </Row>
         {/* </div> */}

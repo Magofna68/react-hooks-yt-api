@@ -1,35 +1,25 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-class searchBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { term: ''};
+const SearchBar = (props) => {
 
-    this.onInputChange = this.onInputChange.bind(this);
-  }
+  const [ term, setTerm ] = useState('');
 
-  onInputChange(event) {
-    this.setState({ term: event.target.value });
-    this.props.onSearchTermChange(event.target.value)
+  onInputChange = (event) => {
+    console.log({term})
+    setTerm(event.target.value);
+    console.log({term})
+    props.onSearchTermChange(event.target.value);
   }
-  render() {
     return (
       <div className='search-bar'>
-        <SearchIcon 
-          id="searchIcon"
-          fontSize="medium"
-          color="white"
-        />
          <input 
-
-          placeholder='Search...'
-          value={this.state.term} 
-          onChange={this.onInputChange} 
+            placeholder='Search...'
+            value={term} 
+            onChange={this.onInputChange} 
         />
       </div>
     );
-  }
 }
 
-export default searchBar;
+export default SearchBar;
