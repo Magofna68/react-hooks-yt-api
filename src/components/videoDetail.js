@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useLayoutEffect } from 'react';
 import {Container, Row, Col} from 'react-bootstrap/';
 // import PropTypes from 'prop-types';
 
@@ -34,7 +34,7 @@ const VideoDetail = (props) => {
           <div className='videDetails'>
             <br/>
             <h3>{video.snippet.title}</h3>
-            <p>{video.snippet.channelTitle}</p>
+            <p><strong>{video.snippet.channelTitle}</strong></p>
             <div className='video-description'>{video.snippet.description}</div>
           </div>
         </Col>

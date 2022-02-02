@@ -33,7 +33,7 @@ const App = () => {
               <Col md={8}>
                 <VideoDetail video={selectedVideo} />
               </Col>
-              <Col xs={2}>
+              <Col xs={4}>
                 <VideoList 
                   onVideoSelect={selected => setSelectedVideo(selected)}
                   videos={videos} 
