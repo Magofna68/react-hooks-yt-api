@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-// import * as YTSearchAction from './actions/yt_search_action'
 import VideoList from './components/videoList';
 import YTSearch from 'youtube-api-search';
 import VideoDetail from './components/videoDetail';
@@ -31,8 +30,10 @@ const App = () => {
             <h5>Brandon Magofna</h5>
             <SearchBar onSearchTermChange={term => fetchResource(term)} />
             <Row className="justify-content-md-center">
+              <Col md={8}>
                 <VideoDetail video={selectedVideo} />
-              <Col xs={4} md={4}>
+              </Col>
+              <Col xs={2}>
                 <VideoList 
                   onVideoSelect={selected => setSelectedVideo(selected)}
                   videos={videos} 
