@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBar = (props) => {
-  const [ term, setTerm ] = useState('');
+  const [ term, setTerm ] = useState("");
 
-  this.onInputChange = (e) => {
+    function handleChange(e) {
     console.log({term});
-    const oldTerm = {...term};
-    const newTerm = e.target.value
+    const lastSearchedTerm = {...term};
+    const searchedTerm = e.target.value
+    const newTerm = {...searchedTerm}
+    
     setTerm(newTerm);
     props.onSearchTermChange(e.target.value);
   }
@@ -17,7 +19,7 @@ const SearchBar = (props) => {
          <input 
             placeholder='Search...'
             value={term} 
-            onChange={this.onInputChange} 
+            onChange={handleChange} 
         />
       </div>
     );
