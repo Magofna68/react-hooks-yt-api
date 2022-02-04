@@ -16,8 +16,8 @@ const SearchBar = (props) => {
 
   return (
       <div className='search-bar'>
+        <SearchIcon id="searchIcon" />
          <input 
-            icon= {<SearchIcon />}
             placeholder='Search...'
             value={term} 
             onChange={handleChange} 
