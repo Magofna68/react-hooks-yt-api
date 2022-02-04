@@ -1,6 +1,5 @@
-import React, { Component, useLayoutEffect } from 'react';
+import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap/';
-// import PropTypes from 'prop-types';
 
 
 const VideoDetail = (props) => {

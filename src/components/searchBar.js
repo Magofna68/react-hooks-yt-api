@@ -4,21 +4,27 @@ import SearchIcon from '@mui/icons-material/Search';
 const SearchBar = (props) => {
   const [ term, setTerm ] = useState("");
 
-    function handleChange (e) {
-    console.log({term});
-    const lastSearchedTerm = {...term};
-    const searchedTerm = e.target.value
-    const newTerm = {...searchedTerm}
-    
+    // function handleChange (e) {
+    //   const lastSearchedTerm = {...term};
+      
+    const handleChange = (e) => {
+      props.onSearchTermChange(e.target.value);
+      const searchedTerm = e.target.value
+      const newTerm = {...searchedTerm}
+      setTerm(...searchedTerm);
+      console.log({term});
+  
+  
     setTerm(newTerm);
-    props.onSearchTermChange(e.target.value);
   }
 
   return (
       <div className='search-bar'>
         <SearchIcon id="searchIcon" />
          <input 
+            type="text"
             placeholder='Search...'
+            label="Search..."
             value={term} 
             onChange={handleChange} 
         />

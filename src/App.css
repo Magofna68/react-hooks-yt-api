@@ -50,8 +50,8 @@ h5{
 }
 
 #searchIcon {
-/* outline: solid; */
 outline-width: thin;
-border-color: white;
+/* border-color:; */
+color: gold;
 margin: 0 3px -5px 0;
 }
