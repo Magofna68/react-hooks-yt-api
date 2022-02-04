@@ -17,10 +17,10 @@ code {
 }
 
 .search-bar{
-  margin: 20px;
+  /* margin: 20px; */
   text-align: center;
   margin-bottom: 3%;
-  margin-top: 2%;
+  margin-top: 3.5%;
 
 }
 
@@ -71,6 +71,7 @@ h2{
 
 h5{
   text-align: center;
+  margin-top: 5%;
 }
 
 .item-right{
@@ -86,4 +87,8 @@ div.video-description {
 
 .media-object {
   width: max-content;
+}
+
+#title{
+  color: red;
 }

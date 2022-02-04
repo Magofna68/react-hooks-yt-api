@@ -26,8 +26,26 @@ const App = () => {
   
   return (
       <Container fluid>
-            <h2>Youtube Hooks API Project</h2>
-            <h5>Brandon Magofna</h5>
+            <h2
+              styles={{color: "#b0bbbf",
+              }}><span id="title">You</span>tube H<span className="whiteText">oo</span>ks<span className="apiHeader">:</span> API <span className="whiteText">Pro</span><span className='apiHeader'>ject</span></h2>
+            <h5
+            style={{
+              color: "gold",
+              paddingTop: "5px"
+            }}>Brandon Magofna</h5>
+            <label 
+              htmlFor="searchbar"
+              style={{
+                marginLeft: "13.25%",
+                color: "silver",
+                // marginBottom: "-1%",
+                marginTop: "2%",
+                fontSize: "smaller",
+                position: "fixed",
+              }}>
+              Search Youtube...
+            </label>
             <SearchBar onSearchTermChange={term => fetchResource(term)} />
             <Row className="justify-content-md-center">
               <Col md={8}>

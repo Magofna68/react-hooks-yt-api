@@ -55,3 +55,15 @@ outline-width: thin;
 color: gold;
 margin: 0 3px -5px 0;
 }
+
+.apiHeader{
+  color: gold;
+}
+
+#title{
+  color: red;
+}
+
+.whiteText{
+  color: white;
+}

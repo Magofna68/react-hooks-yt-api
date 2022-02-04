@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
 const SearchBar = (props) => {
   const [ term, setTerm ] = useState("");
+  const searchInput = React.useRef(null);
+  useEffect(()=> {
+    searchInput.current.focus();
+  }, [term]);
 
     // function handleChange (e) {
     //   const lastSearchedTerm = {...term};
@@ -22,6 +26,7 @@ const SearchBar = (props) => {
       <div className='search-bar'>
         <SearchIcon id="searchIcon" />
          <input 
+            ref={searchInput}
             type="text"
             placeholder='Search...'
             label="Search..."
