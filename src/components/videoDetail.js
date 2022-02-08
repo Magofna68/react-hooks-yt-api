@@ -28,7 +28,7 @@ const VideoDetail = (props) => {
       <Row>
         <Col>
           <div className="embed-responsive embed-responsive-16by9">
-            <iframe title="videoPlayer" className="embed-responsive-item" src={url}></iframe>
+            <iframe  allowfullscreen frameborder="0" title="videoPlayer" className="embed-responsive-item" src={url}></iframe>
           </div>
           <div className='videDetails'>
             <br/>

@@ -28,7 +28,7 @@ const App = () => {
       <Container fluid>
             <h2
               styles={{color: "#b0bbbf",
-              }}><span id="title">You</span>tube H<span className="whiteText">oo</span>ks<span className="apiHeader">:</span> API <span className="whiteText">Pro</span><span className='apiHeader'>ject</span></h2>
+              }}><span id="title">You</span>tube H<span className="whiteText">oo</span>k<span className="apiHeader">:</span> API <span>Pro</span><span className='apiHeader'>ject</span></h2>
             <h5
             style={{
               color: "gold",
@@ -37,12 +37,13 @@ const App = () => {
             <label 
               htmlFor="searchbar"
               style={{
-                marginLeft: "13.25%",
+                marginLeft: "13.5%",
                 color: "silver",
-                // marginBottom: "-1%",
-                marginTop: "2%",
+                marginBottom: "-1%",
+                marginTop: "5%",
+                paddingBottom: "0px",
                 fontSize: "smaller",
-                position: "fixed",
+                position: "sticky",
               }}>
               Search Youtube...
             </label>
@@ -51,7 +52,8 @@ const App = () => {
               <Col md={8}>
                 <VideoDetail video={selectedVideo} />
               </Col>
-              <Col xs={4}>
+              <Col xs={3}>
+              {/* <Col lg={true} md={true} xs={3}> */}
                 <VideoList 
                   onVideoSelect={selected => setSelectedVideo(selected)}
                   videos={videos} 

@@ -20,7 +20,7 @@ code {
   /* margin: 20px; */
   text-align: center;
   margin-bottom: 3%;
-  margin-top: 3.5%;
+  /* margin-top: 3.5%; */
 
 }
 
@@ -33,17 +33,18 @@ code {
 li.list-group-item {
   background: linear-gradient(190deg, darkgray 20%, black 70%);
   cursor: pointer;
-  margin: 2% 0 13% 0;
+  margin: 0% 0 3% 0;
   /* padding: 5% 10%; */
   border-radius: 5px;
   color: white;
   /* overflow: hidden; */
   justify-content: center;
-  justify-self: left;
-  align-items:flex-start;
+  justify-self: center;
+  align-items: center;
   height: min-content;
-  width: fit-content;
-  height: 30%;
+  width: max-content;
+  max-width: 400px;
+  height: 20%;
   border: none;
 
 }
@@ -83,12 +84,9 @@ h5{
 
 div.video-description {
   overflow: hidden;
+  padding: 0 0 10% 0;
 }
 
 .media-object {
   width: max-content;
-}
-
-#title{
-  color: red;
 }

@@ -30,7 +30,7 @@ const SearchBar = (props) => {
             type="text"
             placeholder='Search...'
             label="Search..."
-            value={term} 
+            defaultValue={term} 
             onChange={handleChange} 
         />
       </div>
