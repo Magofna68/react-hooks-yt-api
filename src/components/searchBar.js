@@ -5,8 +5,14 @@ const SearchBar = (props) => {
   const [ term, setTerm ] = useState("");
   const searchInput = React.useRef(null);
 
+  // useEffect(()=> {
+  //   searchInput.current.focus();
+  // }, [term]);
+
   useEffect(()=> {
-    searchInput.current.focus();
+    const timer = setTimeout(() => 
+      searchInput.current.focus(), 3000);
+      return () => clearTimeout(timer);
   }, [term]);
       
     const handleChange = (e) => {
