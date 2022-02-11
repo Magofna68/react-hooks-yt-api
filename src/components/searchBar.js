@@ -26,7 +26,7 @@ const SearchBar = (props) => {
   return (
       <div className='search-bar'>
         <SearchIcon id="searchIcon" />
-         <input 
+        <input 
             ref={searchInput}
             type="text"
             placeholder='Search...'
@@ -34,6 +34,11 @@ const SearchBar = (props) => {
             defaultValue={term} 
             onChange={handleChange} 
         />
+        {/* <button
+          onChange={handleChange}
+          type="success">
+          Search
+        </button> */}
       </div>
     );
 }
