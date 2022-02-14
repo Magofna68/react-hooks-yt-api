@@ -6,7 +6,9 @@ const VideoDetail = (props) => {
   const video = props.video;
 
   if (!video) {
-    return <div>Loading videos...</div>;
+    // return <div>Loading videos...</div>;
+    return <div>Sorry, i've reached my API limit, check back later to get a firsthand look at my site!</div>;
+
   }
   const videoId = video.id.videoId;
   const url = `https://www.youtube.com/embed/${videoId}`;
